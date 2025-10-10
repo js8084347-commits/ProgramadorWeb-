@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon"> <!--Coloca o favicon na página, o href é o local onde está a imagem do favicon-->
+    <title>Prática 02 - HTML</title>
+</head>
+<body>
+    <h1>Paragráfos, quebra de linha e caracteres </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <br>Rerum quae voluptas eaque velit, iure, est illum exercitationem ut, nisi aspernatur maxime perferendis.<br>
+        <!--<br></br> é usado para fazer uma quebra de linha -->
+    <p>Expedita, vitae quibusdam odit autem repellendus tempora suscipit.</p>
+    <p>Se eu quiser adicionar os símbolos de menor que e maior que, como eu faço??</p> <!--A tag <p> é usada para definir um parágrafo-->
+    <p> A tag usada para menor e maior que é: &lt; e &gt;</p> <!-- &lt; é usado para o símbolo de menor que e &gt; é usado para o símbolo de maior que -->
+    <p>10 > 1</p> <!-- Aqui o símbolo de maior que é usado normalmente, por dentro da tag <p></p> -->
+
+    <h1>Emoji</h1>
+    <p>🐒</p> <!-- Aqui o emoji é usado normalmente, por dentro da tag <p></p> -->
+    <!--Forma mais segura de se fazer o emoji usando technical information do emojipedia-->
+    <p>&#x1F412</p><!-- Tira o U+ e coloca no lugar o &#x nessa ordem -->
+
+    <h1>Como colocar imagens </h1> <!-- ATENÇÃO: Cuidado com os Direitos Autorais, sites para pegar imagens: Pexels, Freepik UnSplash  -->
+        <img src="bike.jpg" alt="Foto de uma bicicleta encostada em uma parede." width="300"> <!--Coloca a tag <img> para abrir e src para colocar a imagem, ao alt é para colocar o nome alternativo (serve para pesquisa e acessibilidade); o width é usado para diminuir ou aumentar o tamanho-->
+        <img src="surf.jpg" alt="Homem praticando surf." width="337"> 
+
+    <h1>Hyperlinks </h1>
+        <a href="https://github.com/js8084347-commits" hreflang="pt-BR" target="_blank" rel="external">Github do João</a> <!-- A tag <a> é usada para criar um hyperlink, o href é usado para colocar o link do site que você quer direcionar,hreflang é usado para direcionar em qual idioma está o conteudo, o target="_blank " é usado para abrir o link em uma nova aba, o target="_self" é usado para abrir o link na mesma aba do navegador, o rel="external" é usado para direcionar para um link de um site e fora da empresa ou de outro site (apenas de referencia ) -->
+    
+</html>
