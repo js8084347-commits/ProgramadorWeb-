@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 03</title>
+</head>
+
+<body>
+    <!-- Primeira opção de colocar audio-->
+    <h1>Exemplo de áudio 1</h1>
+    <audio src="Down The Rabbit Hole - The Grey Room _ Density & Time.mp3" controls></audio>
+    <!-- src para fazer a busca do audio e depois colocar o controls-->
+    <!--Segunda opção de colocar audio-->
+    <h1>Exemplo de áudio 2</h1>
+    <audio preload="metadata" controls autoplay loop>
+        <!-- preload para carregar o audio, controls para mostrar os controles, autoplay para tocar automaticamente e loop para repetir o audio-->
+        <source src="On The Flip - The Grey Room _ Density & Time.mp3" type="audio/mp3">
+    </audio>
+    <h1>Formas alternativas de audio</h1>
+
+    <audio controls>
+        <!-- Primeiro formato: o preferido-->
+        <source src="Claim To Fame - The Grey Room _ Clark Sims.mp3" type="audio/mp3">
+        <!-- Segundo formato: alternativa-->
+        <source src="Missed My Chance - The Grey Room _ Clark Sims.ogg" type="audio/ogg">
+        <source src="Purple Desire - The Grey Room _ Clark Sims.wav" type="audio/wav">
+        <!-- Mensagem para navegadores que não suportam o elemento audio-->
+        <p>Seu navegador não suporta o elemento de áudio.</p>
+        <a href="Purple Desire - The Grey Room _ Clark Sims.mp3" download> Baixe o áudio aqui.</a>
+    </audio>
+
+    <h1>Exemplo de vídeo</h1>
+    <!-- Mostrar videos na tela-->
+        <video width="300" poster="" controls autoplay> <!---->
+            <source src="3015510-sd_426_240_24fps.mp4" type="video/mp4">
+        </video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VgDgWzBL7s4?si=Njj-ZDOwHsMRXyVW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    <h2> Input - Texto</h2>
+        <input type="text" placeholder="Digite seu nome"> <!-- input é para o usuario colocar a informação, Type text é para mostrar que o tipo de textto e  o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> Input - senha</h2>
+        <input type="password" placeholder="Digite sua senha"> <!-- input é para o usuario colocar a informação, Type password é para mostrar que o texto é de senha e o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> Input - email</h2>
+        <input type="email" placeholder="Digite seu email"> <!-- input é para o usuario colocar a informação, Type email é para mostrar que o tipo de texto é email e o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> Input - número</h2>
+        <input type="number" min="0" max="100" placeholder="Digite um número"> <!-- input é para o usuario colocar a informação, Type number é para mostrar que o tipo de texto é número e o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> input - Telefone</h2>
+        <input type="tel" placeholder="(84)94002-8922"> <!-- input é para o usuario colocar a informação, Type tel é para mostrar que o tipo de texto é telefone e o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> Input - Data</h2>
+        <input type="date" placeholder="Digite uma data"> <!-- input é para o usuario colocar a informação, Type date é para mostrar que o tipo de texto é data e o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> Input - Hora</h2>
+        <input type="time" placeholder="Digite uma hora"> <!-- input é para o usuario colocar a informação, Type time é para mostrar que o tipo de texto é hora e o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> Input - Cor</h2>
+        <input type="color" placeholder="Escolha uma cor"> <!-- input é para o usuario colocar a informação, Type color é para mostrar que o tipo de texto é cor e o placeholder é para mostrar uma frase dentro da caixa de texto-->
+    <h2> Input - Radio</h2>
+        <input type="radio" name="Sexo"> Masculino <!-- input é para o usuario colocar a informação, Type radio é para mostrar que o tipo de texto é radio-->
+        <input type="radio" name="Sexo"> Feminino
+    <h2> Input - Checkbox</h2>
+        <input type="checkbox"> aceito os termos e condições <!-- input é para o usuario colocar a informação, Type checkbox é para mostrar que o tipo de texto é checkbox-->
+    <h2> Input - Botão</h2>
+        <input type="button" value="Clique aqui"> <audio src="Claim To Fame - The Grey Room _ Clark Sims.mp3" controls></audio> <!-- input é para o usuario colocar a informação, Type button é para mostrar que o tipo de texto é botão e o value é para mostrar o texto dentro do botão-->
+
+    <p> Ir para pagina inicial <a href="Atividade2.html">home</a> </p> <!-- link para mandar para outra pagina, porém só irá funcionar se o link estiver na mesma pasta  -->
+        
+</body>
+
+</html>
