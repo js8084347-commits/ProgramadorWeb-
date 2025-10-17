@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/*Aqui será usado para as cores que serão usados para os textos dos site dentro do html*/
+/* É importante deixar o charset no começo do arquivo CSS para garantir a correta interpretação dos caracteres especiais. */
+/* é muito importante seguir as ordens das tags na html, pois pode dar problema*/
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap');
+
+/*@import é usado para importar fontes externas para o arquivo CSS*/
+/* url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap') é o link da fonte que será importada do Google Fonts*/
+body {
+    background-color: rgb(44, 88, 102);
+    /*background-color é usado para mudar a cor de fundo da tag, pode ser usado para mudar o fundo de qualquer tag <p>,<h1>,<h2>...*/
+    font-family: "BBH Sans Bartle", sans-serif;
+    /*font-family é usado para mudar o tipo da fonte do texto do body*/
+    /* "BBH Sans Bartle", sans-serif muda o tipo da fonte do body, a que apresentará por padrão é a primeira, mas caso não apareça terá outras alternativas de fontes*/
+}
+
+h1 {
+    text-align: center;
+    /*text-align é usado para alinhar o texto dentro da tag*/
+    /* center alinha o texto ao centro da tag*/
+}
+
+p {
+    color: rgb(80, 25, 25);
+    background-color: antiquewhite;
+    /*muda a cor de fundo do parágrafo*/
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /*font-family é usado para mudar o tipo da fonte do texto do parágrafo*/
+    /* Georgia, 'Times New Roman', Times, serif muda o tipo da fonte do parágrafo, a que apresentará por padrão é a primeira, mas caso não apareça terá outras alternativas de fontes*/
+    font-weight: 800;
+    /*font-weight é usado para mudar a espessura da fonte do texto do parágrafo*/
+    /* 800 deixa a fonte bem grossa,como se fosse o negrito*/
+    font-size: 20px;
+    /*Font-size é usado para mudar o tamanho da fonte*/
+    /* 20px muda o tamanho da fonte do parágrafo*/
+}
+
+.pdif {
+    /* Classe que criamos para personalizar*/
+    color: rgb(105, 51, 51);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*font-family é usado para mudar o tipo da fonte do texto do parágrafo*/
+    /* cursive muda o tipo da fonte do parágrafo para uma fonte cursiva*/
+}
+
+#tituloteste {
+    /* id unica que criamos para personalizar*/
+    color: rgb(61, 26, 61);
+    font-family: "BBH Sans Bartle", sans-serif;
+}

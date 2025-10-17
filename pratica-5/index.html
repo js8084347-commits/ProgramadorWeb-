@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Css externo, é um arquivo separado do html, onde colocamos todos os estilos em um unico arquivo, e fazemos a ligação com o html através da tag link, dentro do head-->
+    <title>Introdção ao Css</title>
+    <style>
+        h1 {
+            color: blue;
+            /* Estilo em CSS para todos os elementos h1 na pagina, definindo a cor azul*, é chamado de Css interno*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: red;">Hello World!</h1>
+    <!-- Comentario inline css, é um parametro na propria linha de codigo colocando style="color", pode ser uma excessão para o Css interno, será usado apenas em casos especificos-->
+    <h1> Hello World!</h1> <!-- Frase sem estilo de cor, mas por padrão vem da cor preta -->
+    <!-- Pelo fato de colocarmos o Css interno,a partir de agora ele se tornará da cor selecionada -->
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam excepturi delectus reiciendis.
+        Eveniet doloribus quod dignissimos, distinctio fuga non, eaque ea, adipisci nulla voluptatum autem modi
+        praesentium. Sapiente, nulla!</p>
+
+    <p class="pdif"> Paragrafo em especificos</p>
+    <!--Posso criar uma classe para facilitar a criar, é como se fosse um id para sua personalização; caso vá personalizar, é preciso levar ao style.css -->
+
+    <h2 id="tituloteste">Teste</h2>
+    <!-- Id é um identificador unico, ou seja, só pode ser usado uma vez na pagina, diferente da classe que pode ser usada varias vezes -->
+    <h2>Teste 2</h2>
+
+    <p><a href="https://fonts.google.com/">Google Fonts</a></p>
+    <p><a href="index2.html">Clique aqui!!</a></p>
+</body>
+
+</html>

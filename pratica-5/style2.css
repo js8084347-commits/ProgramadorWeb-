@@ -1,0 +1,8 @@
+a:visited { /* marcação de cor com links visitados */
+    color: darkgreen;
+}
+
+a:hover { /* marcação de cor quando o mouse passa por cima do link */
+    text-decoration: none;
+    color: pink;
+}
