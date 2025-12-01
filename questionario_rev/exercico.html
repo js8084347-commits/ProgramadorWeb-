@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #6fcbdb;
+            text-align: center;
+        }
+        h1 {
+            color: #000000;
+            text-align: center;
+            font-size: 32px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #0080ff;
+        }
+
+        li {
+            text-align: left;
+            margin: 5px 0;
+        }
+        .caixa {
+            background-color: #9ee5f1;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            width: 300px;
+            margin: 40px auto;
+            font-family: Arial, sans-serif;
+        }
+        .caixa:hover {
+            background-color: #8acbd6;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo à Minha Página!</h1>
+
+    <p>Olá! Meu nome é joão e esou estudante de programação Web e esse é o meu exercico da atvidade em HTMl .</p>
+
+    <img src="image-removebg-preview.png" alt="Imagem de exemplo">
+
+    <p>
+        <a href="https://youtu.be/VIs2xSHKdQc?si=l7JAjZ4wxBqfdnRW" target="_blank">
+            Link escolhido 
+        </a>
+    </p>
+
+    <h1>Meus Hobbies</h1>
+
+    <ul>
+        <li>Treinar</li>
+        <li>Conhecer novos lugares</li>
+        <li>Ouvir musica</li>
+        <li>Sair de casa </li>
+        <li>Conversar</li>
+    </ul>
+
+    <div class="caixa">
+        Esta é uma caixa estilizada usando CSS!
+    </div>
+
+    <h1> Clique no link para continuar a sua experiencia </h1>
+    <a href="miniDesa.html" target="_blank">
+        clique aqui
+</body>
+
+<script>
+    let nome = prompt("Digite seu nome:");
+    let idade = prompt("Digite sua idade:");
+    idade = Number(idade); // garante que seja número
+
+if (idade < 18) {
+    alert("Você é menor de idade.");
+} else {
+    alert("Você é maior de idade.");
+}
+
+    alert(`Olá, ${nome}, seja bem vindo ao meu site, eu sou o João e tenho 20 anos e estou aprendendo programação web!, ainda dá tempo para voce aprender também com os seus ${idade} anos de idade. Aproveita!`);
+
+    let nomes = ["Ana", "Harrison", "Marcos", "Prof Gaby", "Loise"];
+
+// Primeiro nome
+console.log("Primeiro nome:", nomes[0]);
+
+// Último nome
+console.log("Último nome:", nomes[nomes.length - 1]);
+
+// Quantidade de nomes
+console.log("Quantidade de nomes no array:", nomes.length);
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Itens</title>
+
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #6fcbdb;
+            text-align: center;
+        }
+        input {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        #btnAdicionar {
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 4px;
+        }
+
+        #btnAdicionar:hover {
+            background-color: #0080ff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Coloque nomes aqui para adicionar a lista =) </h2>
+
+    <input type="text" id="campo" placeholder="Digite algo">
+    <button id="btnAdicionar">Adicionar</button>
+
+    <p id="resultado">Itens adicionados: </p>
+
+    <h2>Como dizia a minha EX: Terminamos </h2>
+    <img src="image-removebg-preview.png" alt="Imagem de exemplo">
+
+    <script>
+        let lista = []; // array vazio
+
+        document.getElementById("btnAdicionar").addEventListener("click", function() {
+            let valor = document.getElementById("campo").value;
+
+            if (valor.trim() !== "") {
+                lista.push(valor); // adiciona no array
+                document.getElementById("resultado").textContent = "Itens adicionados: " + lista.join(", ");
+                document.getElementById("campo").value = ""; // limpa o input
+            }
+        });
+    </script>
+
+</body>
+</html>
