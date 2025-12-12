@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de Cachorros</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffe9d6, #fff6ec);
+            font-family: "Poppins", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* --- DOG CARTOON BACKGROUND --- */
+        #dog-bg {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            transform: none;
+            width: 280px;
+            height: 280px;
+            pointer-events: none;
+            opacity: 0.9;
+        }
+
+        .dog-head {
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            background: #ffcf91;
+            border-radius: 50% 50% 45% 45%;
+            left: 50%;
+            top: 60px;
+            transform: translateX(-50%);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .eye {
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            background: white;
+            border-radius: 50%;
+            top: 70px;
+        }
+
+        .eye.left {
+            left: 35px;
+        }
+
+        .eye.right {
+            right: 35px;
+        }
+
+        .pupil {
+            width: 25px;
+            height: 25px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            transition: 0.1s linear;
+        }
+
+        /* --- MAIN CARD --- */
+        h1 {
+            font-size: 2.5rem;
+            color: #4d3524;
+            margin-bottom: 20px;
+            z-index: 10;
+        }
+
+        #card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+            z-index: 10;
+        }
+
+        #card:hover {
+            transform: scale(1.03);
+        }
+
+        #foto {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: opacity .3s ease;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            background: #ffb36b;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 6px 15px rgba(255, 165, 69, 0.4);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff9c3c;
+            transform: scale(1.08);
+        }
+
+        .loader {
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #ff9c3c;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-top: 15px;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .ear {
+            position: absolute;
+            width: 70px;
+            height: 90px;
+            background: #ffb36b;
+            border-radius: 50% 50% 40% 40%;
+            top: -10px;
+            box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-ear {
+            left: 0;
+            transform: rotate(-20deg);
+        }
+
+        .right-ear {
+            right: 0;
+            transform: rotate(20deg);
+        }
+
+        .nose {
+            position: absolute;
+            width: 35px;
+            height: 28px;
+            background: black;
+            border-radius: 50%;
+            left: 50%;
+            top: 135px;
+            transform: translateX(-50%);
+        }
+
+        .mouth {
+            position: absolute;
+            width: 50px;
+            height: 25px;
+            border-bottom: 5px solid black;
+            border-radius: 0 0 40px 40px;
+            left: 50%;
+            top: 160px;
+            transform: translateX(-50%);
+        }
+
+        #dog-bg-2 {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 220px;
+            height: 220px;
+            pointer-events: none;
+            opacity: 0.9;
+        }
+
+        .dog-head.alt {
+            background: #a8d8ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🐶 O Gerador de Cachorros 🐶</h1>
+
+    <div id="card">
+        <img id="foto" src="" alt="Imagem aleatória de cachorro" />
+        <div class="loader" id="loader"></div>
+        <button onclick="gerar()">Gerar Novo Cachorro</button>
+    </div>
+
+    <!-- CARTOON DOG BACKGROUND FOLLOWING MOUSE -->
+    <div id="dog-bg">
+        <div class="dog-head">
+
+            <!-- EARS -->
+            <div class="ear left-ear"></div>
+            <div class="ear right-ear"></div>
+
+            <!-- EYES -->
+            <div class="eye left">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye right">
+                <div class="pupil"></div>
+            </div>
+
+            <!-- NOSE -->
+            <div class="nose"></div>
+
+            <!-- MOUTH -->
+            <div class="mouth"></div>
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+
+    <div id="dog-bg-2">
+        <div class="dog-head alt">
+            <div class="ear left-ear"></div>
+            <div class="ear right-ear"></div>
+            <div class="eye left">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye right">
+                <div class="pupil"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth"></div>
+        </div>
+    </div>
+
+    <script>
+        const foto = document.getElementById("foto");
+        const loader = document.getElementById("loader");
+        const pupils = document.querySelectorAll('.pupil');
+
+        function gerar() {
+            loader.style.display = "block";
+            foto.style.opacity = "0";
+
+            fetch("https://dog.ceo/api/breeds/image/random")
+                .then(res => res.json())
+                .then(data => {
+                    foto.src = data.message;
+                    foto.onload = () => {
+                        loader.style.display = "none";
+                        foto.style.opacity = "1";
+                    };
+                });
+        }
+
+        gerar();
+
+        // --- MAKE DOG EYES FOLLOW THE MOUSE ---
+        document.addEventListener('mousemove', e => {
+            pupils.forEach(p => {
+                const box = p.parentElement.getBoundingClientRect();
+                const cx = box.left + box.width / 2;
+                const cy = box.top + box.height / 2;
+
+                const dx = e.clientX - cx;
+                const dy = e.clientY - cy;
+
+                const angle = Math.atan2(dy, dx);
+                const dist = 10;
+
+                p.style.transform = `translate(${Math.cos(angle) * dist}px, ${Math.sin(angle) * dist}px)`;
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

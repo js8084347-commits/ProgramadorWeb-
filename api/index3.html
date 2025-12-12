@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Fatos de Gatos</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: blanchedalmond;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        button {
+            background-color: azure;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 300px;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+
+    <h1>Gerador de Fatos de Gatos</h1>
+
+    <p id="fato">Clique no botão para gerar um fato!</p>
+
+    <button onclick="gerarFato()">Gerar fato de Gato</button>
+    <button onclick="mostrarFoto()">Mostrar foto</button>
+
+    <img id="foto" alt="Foto aleatória de gato">
+
+    <script>
+        // Função para traduzir um texto EN → PT-BR
+        function traduzir(texto) {
+            return fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(texto)}&langpair=en|pt`)
+                .then(res => res.json())
+                .then(data => data.responseData.translatedText)
+                .catch(err => {
+                    console.error("Erro na tradução:", err);
+                    return texto; // fallback
+                });
+        }
+
+        // Função para gerar fato
+        function gerarFato() {
+            fetch("https://catfact.ninja/fact")
+                .then(res => res.json())
+                .then(async data => {
+                    const fatoTraduzido = await traduzir(data.fact);
+                    document.getElementById("fato").innerText = fatoTraduzido;
+                })
+                .catch(err => console.error("Erro ao buscar fato:", err));
+        }
+
+        // Função para mostrar foto
+        
+        function mostrarFoto() {
+            const foto = document.getElementById("foto");
+            foto.src = "https://cataas.com/cat?" + Date.now();
+            foto.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
