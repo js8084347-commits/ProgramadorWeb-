@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sobre Nós | Projeto Exemplo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+
+<header>
+  <h1>Sobre Nós</h1>
+  <p>Conheça mais sobre o nosso projeto</p>
+
+  <div class="theme-switcher">
+    <label for="themeSelect">Tema:</label>
+    <select id="themeSelect">
+      <option value="light">Claro</option>
+      <option value="dark">Escuro</option>
+      <option value="green">Verde</option>
+    </select>
+  </div>
+</header>
+
+  <main>
+    <section class="highlight-section">
+  <h2>Nosso Projeto</h2>
+  <p>
+    Este projeto foi desenvolvido com o objetivo de demonstrar boas práticas
+    de desenvolvimento front-end, incluindo organização de código, experiência
+    do usuário e personalização visual.
+  </p>
+</section>
+
+<section class="highlight-section">
+  <h2>Nossa História e Objetivos</h2>
+  <p>
+    Surgimos da necessidade de criar aplicações modernas, acessíveis e
+    adaptáveis. Nosso foco é desenvolver soluções que se moldem às preferências
+    dos usuários, como o sistema de temas implementado nesta página.
+  </p>
+</section>
+
+
+    <section>
+      <h2>Equipe</h2>
+      <div class="team">
+        <div class="team-member">
+          <strong>Alex Silva</strong>
+          <p>Desenvolvedor Front-end</p>
+        </div>
+        <div class="team-member">
+          <strong>Maria Souza</strong>
+          <p>UX/UI Designer</p>
+        </div>
+        <div class="team-member">
+          <strong>João Pereira</strong>
+          <p>Back-end Developer</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <!-- Formulário simples para atender ao requisito funcional -->
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea rows="4" placeholder="Sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Projeto Exemplo</p>
+  </footer>
+
+  <!-- =========================
+       SCRIPT DE TEMAS
+       Decisões técnicas:
+       - Uso de localStorage para persistência
+       - data-theme no <html> para ativar temas
+       - Alteração sem recarregar a página
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
